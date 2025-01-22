@@ -1,0 +1,11 @@
+header{
+    background-color: lightgray;
+    padding: 12px;
+    position: sticky;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+    }
+}
