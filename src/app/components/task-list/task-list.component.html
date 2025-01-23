@@ -2,10 +2,25 @@
 <div class="task-list">
     @for(task of tasks;track task.id){
         @if(task){
-            <div class="task">
-                <h3>{{task.title}}</h3>
-            <p>{{task.desc}}</p>
+            <div class="task" [ngClass]="{'completed':task.completed}">
+              <div class="task1">
+                <div class="task2">
+                    <h3>{{task.title}}</h3>
+                <p>{{task.desc}}</p>
+
+            </div>
+            <div class="Completed">
+                <div class="c2">
+                    <label for="Completed">Mark Finished: </label>
+            <input id="Completed" name="Completed" type="checkbox" [(ngModel)]="task.completed" >
+                </div>
+
             <button (click)="deleteTask(task.id)">Delete</button>
+
+            </div>
+                </div>
+             
+            
             </div>
             
         }

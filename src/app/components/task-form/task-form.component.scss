@@ -4,7 +4,7 @@ form{
     max-width: 400px;
     margin:0 auto;
     margin-top: 20px;
-    padding:20px;
+    padding:20px 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
 
@@ -22,10 +22,10 @@ form{
     }
     textarea{
         resize: vertical;
-        min-height: 100px;
+        min-height: 50px;
     }
     button{
-        background-color:rgba(68, 203, 208, 0.915);
+        background-color:rgb(42, 136, 112);
         color:white;
         font-size:1.1rem;
         padding:10px 10px;
