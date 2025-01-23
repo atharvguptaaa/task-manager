@@ -1,0 +1,36 @@
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin:0 auto;
+    margin-top: 20px;
+    padding:20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    label{
+        margin-bottom:5px;
+        font-weight: bold;
+    }
+    input,textarea{
+        width: 100%;
+        padding:10px;
+        margin-bottom: 15px;
+        border:1px solid #ddd;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    textarea{
+        resize: vertical;
+        min-height: 100px;
+    }
+    button{
+        background-color:rgba(68, 203, 208, 0.915);
+        color:white;
+        font-size:1.1rem;
+        padding:10px 10px;
+        border:none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+}
