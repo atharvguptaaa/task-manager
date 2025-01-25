@@ -1,0 +1,43 @@
+<div class="task" [ngClass]="{'completed':task.completed}">
+    @if(isEditing){
+        <div>
+            <form (ngSubmit)="onSave()"  class="edit-form">
+                <div>
+                    <label for="title" >Title</label>
+                    <input [(ngModel)]="editedTitle"  id="title" name="title" type="text" required>
+                </div>
+                <div>
+                    <label for="Description">Description</label>
+                    <input [(ngModel)]="editedDesc"  id="desc" name="desc" type="text" required>
+                </div>
+
+                <div class="Completed">
+                    <button type="submit">Save</button>
+                    <button type="button" (click)="onCancel()">Cancel</button>
+                </div>
+           
+            </form>
+        </div>
+        }
+    @else{
+        <div class="task1">
+            <div class="task2">
+              <h3>{{ task.title }}</h3>
+              <p>{{ task.desc }}</p>
+            </div>
+            <div class="Completed">
+              <div class="c2">
+                <label for="Completed">Mark Finished: </label>
+                <input
+                  id="Completed"
+                  name="Completed"
+                  type="checkbox"
+                  [(ngModel)]="task.completed"
+                />
+              </div>
+              <button (click)="onDelete()">Delete</button>
+              <button (click)="onEdit()">Edit</button>
+            </div>
+          </div>
+        }
+</div>
