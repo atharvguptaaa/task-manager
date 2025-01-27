@@ -1,0 +1,6 @@
+<select [ngModel]="selectedCategory" (change)="onCategoryChange($event)">
+    <option value="">Select a category</option>
+    @for(category of categories; track category){
+        <option [value]="category">{{category}}</option>
+    }
+</select> 

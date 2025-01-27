@@ -3,4 +3,5 @@ export interface Task{
     title:string;
     desc:string;
     completed:boolean;
+    category:string;
 }

@@ -10,6 +10,7 @@
                     <label for="Description">Description</label>
                     <input [(ngModel)]="editedDesc"  id="desc" name="desc" type="text" required>
                 </div>
+                
 
                 <div class="Completed">
                     <button type="submit">Save</button>
@@ -24,6 +25,7 @@
             <div class="task2">
               <h3>{{ task.title }}</h3>
               <p>{{ task.desc }}</p>
+              <p>AAA{{task.category}}</p>
             </div>
             <div class="Completed">
               <div class="c2">

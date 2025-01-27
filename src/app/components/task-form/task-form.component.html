@@ -6,5 +6,7 @@
     <label for="desc">Description:</label>
     <textarea id="desc" name="desc" [(ngModel)]="desc" required></textarea>
 
+    <app-category-selector (categorySelected)="onCategorySelected($event)"></app-category-selector>
+
     <button type="submit">Add Task</button>
 </form>

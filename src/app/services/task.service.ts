@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Task } from '../models/task.model';
-import { findIndex } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
