@@ -121,3 +121,11 @@
   .task.completed .Completed button {
     background-color: rgb(110, 11, 11); // Red color for buttons in completed tasks
   }
+
+  #category{
+    border:2px solid #e7ddc4;
+    border-radius:5px;
+    background-color: #f5f5f5;
+    padding: 5px;
+    margin-left: -2px;
+  }
