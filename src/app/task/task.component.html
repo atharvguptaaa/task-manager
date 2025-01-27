@@ -10,6 +10,8 @@
                     <label for="Description">Description</label>
                     <input [(ngModel)]="editedDesc"  id="desc" name="desc" type="text" required>
                 </div>
+
+                <app-category-selector (categorySelected)="onCategorySelected($event)"></app-category-selector>
                 
 
                 <div class="Completed">
