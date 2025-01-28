@@ -17,7 +17,7 @@ export class CategorySelectorComponent {
   onCategoryChange(event:Event):void{
     const target = event.target as HTMLSelectElement;
     this.selectedCategory=target.value;
-    this.categorySelected.emit(this.selectedCategory);    
+    this.categorySelected.emit(target.value);    
   } 
 }
 
