@@ -3,12 +3,11 @@ import { TaskService } from '../../services/task.service';
 import { Task } from '../../models/task.model';
 import { TaskFormComponent } from "../task-form/task-form.component";
 import { FormsModule } from '@angular/forms';
-import { NgClass } from '@angular/common';
 import { TaskComponent } from "../../task/task.component";
 
 @Component({
   selector: 'app-task-list',
-  imports: [TaskFormComponent, FormsModule, NgClass, TaskComponent],
+  imports: [TaskFormComponent, FormsModule, TaskComponent],
   templateUrl: './task-list.component.html',  
   styleUrl: './task-list.component.scss'
 })

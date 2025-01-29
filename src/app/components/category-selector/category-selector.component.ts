@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 
@@ -10,7 +10,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class CategorySelectorComponent {
   selectedCategory:string='';
+
   @Output() categorySelected= new EventEmitter<string>();
+  @Input() resetTrigger:boolean=false;
+  
 
   categories:string[]=['Work','Personal','Urgent'];
 
@@ -19,5 +22,19 @@ export class CategorySelectorComponent {
     this.selectedCategory=target.value;
     this.categorySelected.emit(target.value);    
   } 
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if ('resetTrigger' in changes) {
+      this.resetCategory();
+    }
+  }
+
+  resetCategory(): void {
+    this.selectedCategory = ''; // Reset the selection
+    this.categorySelected.emit(this.selectedCategory);
+  }
+
+
+ 
 }
 

@@ -11,6 +11,9 @@ import { CategorySelectorComponent } from "../category-selector/category-selecto
 })
 export class TaskFormComponent {
   @Output() taskAdded=new EventEmitter<void>();
+  
+  resetTrigger:boolean=false;
+
   title='';
   desc='';
   category="";
@@ -33,5 +36,7 @@ export class TaskFormComponent {
     this.title='';
     this.desc='';
     this.category='';
+    console.log("Add button clicked"); 
+    this.resetTrigger=!this.resetTrigger;
     }
 }
