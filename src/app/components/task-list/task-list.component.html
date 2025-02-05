@@ -1,10 +1,23 @@
 <app-task-form (taskAdded)="onTaskAdded()"></app-task-form>
+
+<div class="filter-bar">
+    <div class="category-buttons">
+        <button 
+        *ngFor="let category of categories"
+        [class.active]="selectedCategory===category"
+        (click)="onCategoryFilterChange(category)">{{category}}
+        <span class="active-bar" *ngIf="selectedCategory === category"></span>
+    </button>
+    </div>
+  </div>
+
 <div class="task-list">
-    @for(task of tasks;track task.id){
+    <div *ngFor="let task of tasks | filterCategory: selectedCategory">
         <app-task 
         [task]="task"
         (taskUpdated)="onTaskUpdated($event)"
         (taskDeleted)="onTaskDeleted($event)"
         ></app-task>
-    }
+      </div>
+      
 </div>
